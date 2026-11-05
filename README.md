@@ -38,15 +38,21 @@
 
 | 文件 | 作用 |
 |---|---|
-| `index.html` | 入口 |
-| `style.css` | 暖色纸感样式、月亮与花瓣 |
-| `game.js` | 章节流程、判定、存档、物证地图 |
-| `data.js` | 全部剧情与推理数据 |
+| `index.html` | 封面 / 落地页（微信分享的缩略图就是这张封面） |
+| `cover-1x1.png` | 方形封面（微信、朋友圈） |
+| `cover-9x16.png` | 竖版封面（小红书、状态） |
+| `play/index.html` | 游戏入口 |
+| `play/style.css` | 暖色纸感样式、月亮与花瓣 |
+| `play/game.js` | 章节流程、判定、存档、物证地图 |
+| `play/data.js` | 全部剧情与推理数据 |
+| `分享文案.md` | 转发用的文案与发图建议 |
 
-## 发布到 GitHub Pages（可选）
+## 线上
 
-1. 新建仓库，把这 4 个文件推到根目录。
-2. Settings → Pages → Source 选 `main` / `/root`。
-3. 访问 `https://<用户名>.github.io/<仓库名>/`。
+- 封面页：https://kiyoko-qf.github.io/guihua/
+- 游戏页：https://kiyoko-qf.github.io/guihua/play/
+- 仓库：https://github.com/kiyoko-qf/guihua
 
-本地双击与线上跑的是同一套静态文件，无需构建、无后端。
+改完本地文件后，用 `gh api` 把改动推到 `main`，Pages 一分钟内自动重建（链接不变）。
+微信缓存较久，转给朋友时可以加 `?v=2` 强制刷新。
+
